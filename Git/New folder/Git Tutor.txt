@@ -1,0 +1,654 @@
+
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop
+$
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop
+$ git init
+Initialized empty Git repository in C:/Users/vrahu/OneDrive/Desktop/.git/
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git clone https://github.com/buckyroberts/Source-Code-from-Tutorials.git
+fatal: destination path 'Source-Code-from-Tutorials' already exists and is not an empty directory.
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git remote add origin "https://github.com/vrahul7/vgcode.git"
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git pull origin master
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From https://github.com/vrahul7/vgcode
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        30-Days-Of-Code/
+        Dev-C++.lnk
+        Source-Code-from-Tutorials/
+        TLE/
+        desktop.ini
+        vg.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git add "vg.txt"
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   vg.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        30-Days-Of-Code/
+        Dev-C++.lnk
+        Source-Code-from-Tutorials/
+        TLE/
+        desktop.ini
+
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git commit -m "This is first edited tesxt  doc"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'vrahu@DESKTOP-F92K1U1.(none)')
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git config --global user.email "vgrahul7@gmail.com"
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git config --global user.name "vrahul7"
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git commit -m "This is first edited tesxt  doc"
+[master e5c7442] This is first edited tesxt  doc
+ 1 file changed, 1 insertion(+)
+ create mode 100644 vg.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        30-Days-Of-Code/
+        Dev-C++.lnk
+        Source-Code-from-Tutorials/
+        TLE/
+        desktop.ini
+        vg2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git add "vg2.txt"
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   vg2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        30-Days-Of-Code/
+        Dev-C++.lnk
+        Source-Code-from-Tutorials/
+        TLE/
+        desktop.ini
+        vg3.txt
+
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git add "vg3.txt"
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   vg2.txt
+        new file:   vg3.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        30-Days-Of-Code/
+        Dev-C++.lnk
+        Source-Code-from-Tutorials/
+        TLE/
+        desktop.ini
+
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git commit -a -m "addin all"
+[master 6266dd7] addin all
+ 2 files changed, 1 insertion(+)
+ create mode 100644 vg2.txt
+ create mode 100644 vg3.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git log
+commit 6266dd7fcd328c54c51c9e5ff09dea5150561a95 (HEAD -> master)
+Author: vrahul7 <vgrahul7@gmail.com>
+Date:   Thu Sep 6 06:48:10 2018 +0530
+
+    addin all
+
+commit e5c74422830488c37bf3273bd9a221dccec76e09
+Author: vrahul7 <vgrahul7@gmail.com>
+Date:   Thu Sep 6 06:45:12 2018 +0530
+
+    This is first edited tesxt  doc
+
+commit c5e4b87169f3eb63cc7d60bcdc2ac3e7748b3065 (origin/master)
+Author: vrahul7 <vgrahul7@gmail.com>
+Date:   Wed Sep 5 22:20:27 2018 +0530
+
+    Update README.md
+
+commit 67d1387823d9f9d4dbf5ca268893478274d5d59f
+Author: vrahul7 <vgrahul7@gmail.com>
+Date:   Wed Sep 5 22:19:25 2018 +0530
+
+    Initial commit
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git branch firstbranch
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git status
+On branch firstbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        30-Days-Of-Code/
+        Dev-C++.lnk
+        Source-Code-from-Tutorials/
+        TLE/
+        desktop.ini
+        vg4.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git add "vgr4.txt"
+fatal: pathspec 'vgr4.txt' did not match any files
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git add vgr4.txt
+fatal: pathspec 'vgr4.txt' did not match any files
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git add vg4.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git commit - m "First bracnh Change"
+error: pathspec '-' did not match any file(s) known to git.
+error: pathspec 'm' did not match any file(s) known to git.
+error: pathspec 'First bracnh Change' did not match any file(s) known to git.
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git commit -m "First bracnh Change"
+[firstbranch 040ee26] First bracnh Change
+ 1 file changed, 1 insertion(+)
+ create mode 100644 vg4.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ ls
+30-Days-Of-Code/  Dev-C++.lnk*  Source-Code-from-Tutorials/  vg.txt   vg3.txt
+desktop.ini       README.md     TLE/                         vg2.txt  vg4.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git merge firstbranch
+Updating 6266dd7..040ee26
+Fast-forward
+ vg4.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 vg4.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ ls
+30-Days-Of-Code/  Dev-C++.lnk*  Source-Code-from-Tutorials/  vg.txt   vg3.txt
+desktop.ini       README.md     TLE/                         vg2.txt  vg4.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git status
+On branch firstbranch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   vg4.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        30-Days-Of-Code/
+        Dev-C++.lnk
+        Source-Code-from-Tutorials/
+        TLE/
+        desktop.ini
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git commit -m "Modied"
+On branch firstbranch
+Changes not staged for commit:
+        modified:   vg4.txt
+
+Untracked files:
+        30-Days-Of-Code/
+        Dev-C++.lnk
+        Source-Code-from-Tutorials/
+        TLE/
+        desktop.ini
+
+no changes added to commit
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ ls
+30-Days-Of-Code/  Dev-C++.lnk*  Source-Code-from-Tutorials/  vg.txt   vg3.txt
+desktop.ini       README.md     TLE/                         vg2.txt  vg4.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git commit -a -m "Modied"
+[firstbranch f4d108b] Modied
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ vg4.txt
+bash: vg4.txt: command not found
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ cat vg4.txt
+first bran modified first
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ ls
+30-Days-Of-Code/  Dev-C++.lnk*  Source-Code-from-Tutorials/  vg.txt   vg3.txt
+desktop.ini       README.md     TLE/                         vg2.txt  vg4.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ cat vg4.txt
+first bran
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git status
+On branch firstbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        30-Days-Of-Code/
+        Dev-C++.lnk
+        Source-Code-from-Tutorials/
+        TLE/
+        desktop.ini
+        vg5.txt
+        vg6.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git add -A
+warning: adding embedded git repository: 30-Days-Of-Code
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> 30-Days-Of-Code
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached 30-Days-Of-Code
+hint:
+hint: See "git help submodule" for more information.
+warning: adding embedded git repository: Source-Code-from-Tutorials
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git status
+
+On branch firstbranch
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   30-Days-Of-Code
+        new file:   Dev-C++.lnk
+        new file:   Source-Code-from-Tutorials
+        new file:   TLE/C Programming-Day1.pdf
+        new file:   TLE/C Programming-Day10.pdf
+        new file:   TLE/C Programming-Day2.pdf
+        new file:   TLE/C Programming-Day3.pdf
+        new file:   TLE/C Programming-Day4.pdf
+        new file:   TLE/C Programming-Day5.pdf
+        new file:   TLE/C Programming-Day6.pdf
+        new file:   TLE/C Programming-Day7.pdf
+        new file:   TLE/C Programming-Day8&9.pdf
+        new file:   desktop.ini
+        new file:   vg5.txt
+        new file:   vg6.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+        modified:   30-Days-Of-Code (untracked content)
+
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git reset
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git status
+On branch firstbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        30-Days-Of-Code/
+        Dev-C++.lnk
+        Source-Code-from-Tutorials/
+        TLE/
+        desktop.ini
+        vg5.txt
+        vg6.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git add vg5.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git add vg6.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git status
+On branch firstbranch
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   vg5.txt
+        new file:   vg6.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        30-Days-Of-Code/
+        Dev-C++.lnk
+        Source-Code-from-Tutorials/
+        TLE/
+        desktop.ini
+
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git commit -a -m "adding all"
+[firstbranch 283f91c] adding all
+ 2 files changed, 2 insertions(+)
+ create mode 100644 vg5.txt
+ create mode 100644 vg6.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ ls
+30-Days-Of-Code/  README.md                    vg.txt   vg4.txt
+desktop.ini       Source-Code-from-Tutorials/  vg2.txt  vg5.txt
+Dev-C++.lnk*      TLE/                         vg3.txt  vg6.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ ls
+30-Days-Of-Code/  Dev-C++.lnk*  Source-Code-from-Tutorials/  vg.txt   vg3.txt
+desktop.ini       README.md     TLE/                         vg2.txt  vg4.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git rebase master
+Current branch firstbranch is up to date.
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git rebase firstbranch
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to firstbranch.
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ ls
+30-Days-Of-Code/  README.md                    vg.txt   vg4.txt
+desktop.ini       Source-Code-from-Tutorials/  vg2.txt  vg5.txt
+Dev-C++.lnk*      TLE/                         vg3.txt  vg6.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ ssh -keygen
+Bad escape character 'ygen'.
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ ssh -keygen
+Bad escape character 'ygen'.
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ ^C
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ ssh -keygen
+Bad escape character 'ygen'.
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/vrahu/.ssh/id_rsa):
+Created directory '/c/Users/vrahu/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/vrahu/.ssh/id_rsa.
+Your public key has been saved in /c/Users/vrahu/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:Bdbw49wp5ECoES/A8tQkM6SXJ6dlSRgKtN9y7m0DMRs vrahu@DESKTOP-F92K1U1
+The key's randomart image is:
++---[RSA 2048]----+
+|o+B=+. .=o       |
+|oo=Boo.o o.      |
+|o=+ Bo. . =      |
+| .oBoE   B o .   |
+|  .o o= S = o    |
+|    +o     .     |
+|     ..          |
+|    . .o         |
+|     ....        |
++----[SHA256]-----+
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ cat /c/Users/vrahu/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzrRRyS2AXGMxskigox9877vC1qEZdPxjPmLPHLwvvzOVUfLGkcfltrTcDcl6MQb9DMTw1NYsHUg94CP+7l1BdPYjAbT96ldA9OMfM8bnhClYvvDjA781dlqzGY2Wgl2nzXwNupdL8e0fNHCFJ+nu+vvqQsJz+ky+fbcIO3YZHspbOSmEQ33F4pFM8+yQjcrtUmW788vDWzA7C5ALbcegFmNNbfLu/oDc8n6S9uibhoIKxvzLYBD9EjCGN1AfeX01V9MHHkiXCqLFS2fuNaEqyIm1+WhVKrvo9Ks4ymZhnbtBDkG4xLKDbwOEYOu0aaHHke6R0aKs05y77PkxnE/81 vrahu@DESKTOP-F92K1U1
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ ssh -T git@github.com
+The authenticity of host 'github.com (192.30.253.112)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+Hi vrahul7! You've successfully authenticated, but GitHub does not provide shell access.
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git checkout
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git push origin firstbranch
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (17/17), 1.22 KiB | 49.00 KiB/s, done.
+Total 17 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/vrahul7/vgcode.git
+ * [new branch]      firstbranch -> firstbranch
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git checkout msater
+error: pathspec 'msater' did not match any file(s) known to git.
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git push origin master
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/vrahul7/vgcode.git
+   c5e4b87..283f91c  master -> master
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git add revert.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git commit -m " revert"
+[master 4fc997d]  revert
+ 1 file changed, 1 insertion(+)
+ create mode 100644 revert.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git commit -a -m " revert"
+[master 4056b0d]  revert
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ ls
+30-Days-Of-Code/  README.md                    TLE/     vg3.txt  vg6.txt
+desktop.ini       revert.txt                   vg.txt   vg4.txt
+Dev-C++.lnk*      Source-Code-from-Tutorials/  vg2.txt  vg5.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ cat revert.txt
+hello there
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git log
+commit 4056b0d229e0242d619d4e40aa97c143991f601d (HEAD -> master)
+Author: vrahul7 <vgrahul7@gmail.com>
+Date:   Thu Sep 6 07:27:34 2018 +0530
+
+     revert
+
+commit 4fc997daa3f84383d2252b6e919961ccaba391ce
+Author: vrahul7 <vgrahul7@gmail.com>
+Date:   Thu Sep 6 07:27:05 2018 +0530
+
+     revert
+
+commit 283f91c6594e780ecfb3bcb54564a6446e196061 (origin/master, origin/firstbranch, firstbranch)
+Author: vrahul7 <vgrahul7@gmail.com>
+Date:   Thu Sep 6 07:10:55 2018 +0530
+
+    adding all
+
+commit f4d108b4d44ac661747888823e2e96b8fc2cee0c
+Author: vrahul7 <vgrahul7@gmail.com>
+Date:   Thu Sep 6 06:59:41 2018 +0530
+
+    Modied
+
+commit 040ee26604f816bb54c4ae51bf04d9e307d88d83
+
+     revert
+
+commit 4fc997daa3f84383d2252b6e919961ccaba391ce
+Author: vrahul7 <vgrahul7@gmail.com>
+Date:   Thu Sep 6 07:27:05 2018 +0530
+
+     revert
+
+commit 283f91c6594e780ecfb3bcb54564a6446e196061 (origin/master, origin/firstbranch, firstbranch)
+Author: vrahul7 <vgrahul7@gmail.com>
+Date:   Thu Sep 6 07:10:55 2018 +0530
+
+    adding all
+
+commit f4d108b4d44ac661747888823e2e96b8fc2cee0c
+Author: vrahul7 <vgrahul7@gmail.com>
+Date:   Thu Sep 6 06:59:41 2018 +0530
+
+    Modied
+
+commit 040ee26604f816bb54c4ae51bf04d9e307d88d83
+Author: vrahul7 <vgrahul7@gmail.com>
+:
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+
+
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ git checkout 4fc997da revert.txt
+
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$ cat revert.txt
+hello
+vrahu@DESKTOP-F92K1U1 MINGW64 ~/OneDrive/Desktop (master)
+$
